@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Newspeak",
+    "description": "Runs a best-effort translation of web pages to Newspeak (1984, George Orwell).",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "lib/newspeak_trie.js",
+                "data/trie_data.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
